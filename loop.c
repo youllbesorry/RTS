@@ -6,7 +6,7 @@
 /*   By: bfaure <bfaure@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/15 14:03:28 by bfaure            #+#    #+#             */
-/*   Updated: 2023/04/28 00:16:50 by bfaure           ###   ########lyon.fr   */
+/*   Updated: 2023/04/28 01:36:11 by bfaure           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,8 +41,16 @@ int	loop1(t_data *data)
 {
 	int	dis_up;
 	int	dis_down;
+	int	*x;
+	int	*y;
 
+	x = 0;
+	y = 0;
+	x = malloc(sizeof(int) * 1);
+	y = malloc(sizeof(int) * 1);
 	fill_map(data);
+	mlx_mouse_get_pos(data->mlx, data->win, x, y);
+	printf("x = %d, y = %d\n", x[0], y[0]);
 	dis_up = dis_to_the_up(data->player_x, data->player_y, data);
 	dis_down = dis_to_the_down(data->player_x, data->player_y, data);
 	if (dis_up > 32 && data->player_diry == -data->v_dir)
