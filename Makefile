@@ -6,7 +6,7 @@
 #    By: bfaure <bfaure@student.42lyon.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/11 14:25:35 by bfaure            #+#    #+#              #
-#    Updated: 2023/03/20 13:22:44 by bfaure           ###   ########lyon.fr    #
+#    Updated: 2023/04/27 22:55:30 by bfaure           ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@
 
 # ---- Final Executable --- #
 
-NAME		=	so_long
+NAME		=	RTS
 
 LIBFT		=	libft.a
 

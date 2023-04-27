@@ -6,7 +6,7 @@
 /*   By: bfaure <bfaure@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 14:51:38 by bfaure            #+#    #+#             */
-/*   Updated: 2023/03/17 11:58:47 by bfaure           ###   ########lyon.fr   */
+/*   Updated: 2023/04/27 22:59:15 by bfaure           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,18 +21,18 @@ int	put_image(char **tab_map, t_data *data, int y, int x)
 	mlx_string_put(data->mlx, data->win, 40, 10, 0, nb_move);
 	if (tab_map[y][x] == '0' || tab_map[y][x] == 'P')
 		mlx_put_image_to_window(data->mlx, data->win, data->img.floor,
-			(x * 32), (y * 32));
+			(x * IMG_SIZE), (y * IMG_SIZE));
 	mlx_put_image_to_window(data->mlx, data->win, data->img.player,
 		(data->player_x), (data->player_y));
 	if (tab_map[y][x] == 'E')
 		mlx_put_image_to_window(data->mlx, data->win, data->img.exit,
-			(x * 32), (y * 32));
+			(x * IMG_SIZE), (y * IMG_SIZE));
 	if (tab_map[y][x] == '1')
 		mlx_put_image_to_window(data->mlx, data->win, data->img.wall,
-			(x * 32), (y * 32));
+			(x * IMG_SIZE), (y * IMG_SIZE));
 	if (tab_map[y][x] == 'C')
 		mlx_put_image_to_window(data->mlx, data->win, data->img.rocks,
-			(x * 32), (y * 32));
+			(x * IMG_SIZE), (y * IMG_SIZE));
 	mlx_string_put(data->mlx, data->win, 1, 10, 0, "move :");
 	mlx_string_put(data->mlx, data->win, 40, 10, 0, nb_move);
 	free(nb_move);
@@ -94,8 +94,8 @@ void	map_init(t_data *data)
 	if (!data->mlx)
 		return ((void)destroy(data));
 	mlx_do_key_autorepeatoff(data->mlx);
-	data->win = mlx_new_window(data->mlx, (data->len.x + 1) * 32,
-			(data->len.y - 1) * 32, "So long");
+	data->win = mlx_new_window(data->mlx, (data->len.x + 1) * IMG_SIZE,
+			(data->len.y - 1) * IMG_SIZE, "So long");
 	if (img_init1(data) == -1)
 		return ;
 	if (img_init2(data) == -1)

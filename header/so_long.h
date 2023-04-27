@@ -6,7 +6,7 @@
 /*   By: bfaure <bfaure@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/11 15:44:36 by bfaure            #+#    #+#             */
-/*   Updated: 2023/03/17 11:49:44 by bfaure           ###   ########lyon.fr   */
+/*   Updated: 2023/04/27 23:38:42 by bfaure           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,9 @@
 
 # ifndef V_DIR
 #  define V_DIR 2
+# endif
+# ifndef IMG_SIZE
+#  define IMG_SIZE 32
 # endif
 
 int		loop1(t_data *data);

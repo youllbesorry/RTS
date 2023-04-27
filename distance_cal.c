@@ -6,7 +6,7 @@
 /*   By: bfaure <bfaure@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/26 13:12:03 by bfaure            #+#    #+#             */
-/*   Updated: 2023/03/14 13:51:51 by bfaure           ###   ########lyon.fr   */
+/*   Updated: 2023/04/28 00:16:23 by bfaure           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ int	dis_to_the_right(int x_p, int y_p, t_data *data)
 
 	y_f = (32 * ((y_p + 31) / 32));
 	y_h = (32 * ((y_p) / 32));
-	if (data->tab_map[(y_h / 32)][(x_p / 32) + 1] == '1'
-	|| data->tab_map[(y_f / 32)][(x_p / 32) + 1] == '1')
+	if ((data->tab_map[(y_h / 32)][(x_p / 32) + 1] == '1'
+	|| data->tab_map[(y_f / 32)][(x_p / 32) + 1] == '1'))
 		return (0);
 	return ((32 - x_p % 32) + dis_to_the_right((32 + x_p), y_p, data));
 }
